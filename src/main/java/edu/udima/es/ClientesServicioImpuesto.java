@@ -7,8 +7,24 @@ import java.io.InputStreamReader;
 import edu.udima.es.client.Impuestos;
 import edu.udima.es.client.ImpuestosServicio;
 
+
+/**
+ * Invoca a un servicio web SOAP cuyo port {@link ImpuestosServicio} o endpoint se recupera a traves
+ * de la clase {@link Impuestos}.
+ * Las clases ubicadas en el paquete edu.udima.es.client son autogeneradas
+ * a partir del WSDL ubicado en https://impuestosws.herokuapp.com/calculaIVA?wsdl
+ * usando la herramienta wsimport.
+ * 
+ * @author Sofia Sabariego
+ */
 public class ClientesServicioImpuesto {
 
+	/**
+	 * Se pide un importe neto y se devolvera el importe resultante de
+	 * aplicarle el IVA.
+	 * @param args no se pasan argumentos.
+	 * @throws IOException si se producen errores en la entrada o salida de datos.
+	 */
 	public static void main(String[] args) throws IOException {
 		escribir("Introduzca el importe neto: ");
 		String importeSinIVA= leer();
